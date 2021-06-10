@@ -8,7 +8,7 @@ With the kind support of Othernet and the LNB manufacturer Sy Science and Techno
 This design is for a stand-alone Arduino based calibration tool which allows the LNB TCXO Frequency to be adjusted by the end user. It is also possible to connect this tool to a PC and send adjustment commands. 
 
 ### Details
-In order to keep construction as simple as possible it was decided to use a readily available and low cost Arduino Nano as the controlling processor. This is programmed with the file https://github.com/g4eml/Bullseye-Calibrator/blob/main/Bullseye_Calibrator.ino using the normal Arduino IDE. Othe Arduinos should work equally well. 
+In order to keep construction as simple as possible it was decided to use a readily available and low cost Arduino Nano as the controlling processor. This is programmed with the file https://github.com/g4eml/Bullseye-Calibrator/blob/main/Bullseye_Calibrator.ino using the normal Arduino IDE. Other Arduinos should work equally well. 
 
 The Bullseye LNB is programmed through its Red F Type connector. As detailed in the Alignment Procedure PDF document the interface between the Arduino and the LNB is serial data at 9600 Baud with levels of 0V and +15V. Because the Arduino can only produce data at 5V it is necessary to build a simple level converter circuit using a few low cost components. There are three pushbuttons for control. The interface needs a power supply between 18 and 30 Volts DC. This can be from two 9V batteries or an external power supply. The LNB also needs to be powered through its normal Green F Type connector. 
 
