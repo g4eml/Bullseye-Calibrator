@@ -8,7 +8,7 @@ With the kind support of Othernet and the LNB manufacturer Sy Science and Techno
 This design is for a stand-alone Arduino based calibration tool which allows the LNB TCXO Frequency to be adjusted by the end user. It is also possible to connect this tool to a PC and send adjustment commands. 
 
 ### Warning
-Note that the Alignment document makes it clear that any attempt to adjust the LNB will invalidate the warrenty. If you try to adjust your LNB using this calibrator you are doing so at your own risk.  
+The Alignment document makes it clear that any attempt to adjust the LNB will invalidate the warrenty. If you try to adjust your LNB using this calibrator you are doing so at your own risk.  
 
 ### Details
 In order to keep construction as simple as possible it was decided to use a readily available and low cost Arduino Nano as the controlling processor. This is programmed with the file https://github.com/g4eml/Bullseye-Calibrator/blob/main/Bullseye_Calibrator.ino using the normal Arduino IDE. Other Arduinos should work equally well. 
