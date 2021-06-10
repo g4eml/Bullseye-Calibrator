@@ -34,7 +34,7 @@ Connect an 18 to 30 V power supply to the calibrator.
 
 Press the PLUS or MINUS buttons to adjust the LNB LO Frequency. This should move in steps of approximately 200Hz. If you need to move a long way you can hold down the button which will then move at 10 steps per second. You should observe the beacon signal moving along the receiver waterfall display.
 
-When the displayed frequency is a close as possible to the correct frequency of the beacon press the SAVE button. This will save the new setting into the LNB memory and will be used every time the LNB is powered on. 
+When the displayed frequency is a close as possible to the correct frequency of the beacon press the SAVE button. This will save the new setting into the LNB memory and will then be used every time the LNB is powered on. 
 
 If you make a mistake press all three buttons at the same time. This will restore the factory calibration value. 
 
