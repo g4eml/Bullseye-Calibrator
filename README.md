@@ -14,4 +14,36 @@ The Bullseye LNB is programmed through its Red F Type connector. As detailed in 
 
 The schematic for this interface is included in file Schematic.pdf.  None of the parts are particularly critical and may be surface mount or through hole parts. Some suggested part numbers are included on the schematic. 
 
+### Stand-Alone Operation
+To adjust the calibration of the LNB using the calibrator you need to do the following...
+
+Set up the LNB as normal using the Green Connector and tune your receiver to a known frequency signal such as one of the QO-100 Beacons, a terrestrial 10GHz beacon or a GPS locked signal source.   
+
+If you are using SDR software that can compensate for LNB errors make sure that this compensation is turned off so that you can see the amount of error that needs correcting. 
+
+Observe the beacon signal, and note how much it needs to be moved in order to indicate the correct frequency. A waterfall display makes this fairly easy.
+
+Allow the LNB temperature to stabilise for about 10 minutes. The LNB will drift a little initially but should then stabilise. 
+
+Connect the calibrator to the LNB Red connector using a short length of 75 ohm cable. (It is not currently known how long this cable can be, if it is too long it may cause problems with the calibration commands.) 
+
+Connect an 18 to 30 V power supply to the calibrator. 
+
+Press the PLUS or MINUS buttons to adjust the LNB LO Frequency. This should move in steps of approximately 200Hz. If you need to move a long way you can hold down the button which will then move at 10 steps per second. You should observe the beacon signal moving along the receiver waterfall display.
+
+When the displayed frequency is a close as possible to the correct frequency of the beacon press the SAVE button. This will save the new setting into the LNB memory and will be used every time the LNB is powered on. 
+
+If you make a mistake press all three buttons at the same time. This will restore the factory calibration value. 
+
+### PC Operation
+It is also possible to connect the Calibrator to a PC through the Arduino USB port. This allows the calibration commands to be sent from the PC Keyboard. 
+Use a Terminal program on the PC and set the communications to 9600 Baud, 8 Bits, No Parity, 1 Stop Bit. 
+Commands are single upper case characters as listed in the PDF document. 
+
+
+
+
+
+
+
 
