@@ -8,9 +8,9 @@ With the kind support of Othernet and the LNB manufacturer Sy Science and Techno
 This design is for a stand-alone Arduino based calibration tool which allows the LNB TCXO Frequency to be adjusted by the end user. It is also possible to connect this tool to a PC and send adjustment commands. 
 
 ### Details
-In order to make this as simple as possible to construct it was decided to use a readily available and low cost Arduino Nano as the controlling processor. This is programmed with the file xxxxxxxx.ino using the normal Arduino IDE.
+In order to keep construction as simple as possible it was decided to use a readily available and low cost Arduino Nano as the controlling processor. This is programmed with the file xxxxxxxx.ino using the normal Arduino IDE. Othe Arduinos should work equally well. 
 
-The Bullseye LNB is programmed through its Red F Type connector. As detailed in the Alignment Procedure PDF document the interface between the Arduino and the LNB is serial data at 9600 Baud with levels of 0V and +15V. Because the Arduino can only produce data at 5V it is necessary to build a simple level converter circuit using a few low cost components. For control of the Arduino there are three pushbuttons. The interface needs at least 18V as a power supply. This can be from two 9V batteries or an external power supply. It could also be taken from the 18V supply feeding the LNB Green port with a T Connector.  
+The Bullseye LNB is programmed through its Red F Type connector. As detailed in the Alignment Procedure PDF document the interface between the Arduino and the LNB is serial data at 9600 Baud with levels of 0V and +15V. Because the Arduino can only produce data at 5V it is necessary to build a simple level converter circuit using a few low cost components. There are three pushbuttons for control. The interface needs a power supply between 18 and 30 Volts DC. This can be from two 9V batteries or an external power supply. The LNB also needs to be powered through its normal Green F Type connector. 
 
 The schematic for this interface is included in file XXXXXXX.pdf.  None of the parts are particularly critical and may be surface mount or through hole parts. Some suggested part numbers are included on the schematic. 
 
