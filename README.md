@@ -7,7 +7,7 @@ With the kind support of Othernet and the LNB manufacturer Sy Science and Techno
 
 This design is for a stand-alone Arduino based calibration tool which allows the LNB TCXO Frequency to be adjusted by the end user. It is also possible to connect this tool to a PC and send adjustment commands. 
 
-### Warning
+### Warning!
 The Alignment document makes it clear that any attempt to adjust the LNB will invalidate the warranty. If you try to adjust your LNB using this calibrator you are doing so at your own risk.  
 
 ### Details
