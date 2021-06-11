@@ -15,7 +15,7 @@ In order to keep construction as simple as possible it was decided to use a read
 
 The Bullseye LNB is programmed through its Red F Type connector. As detailed in the Alignment Procedure PDF document the interface between the Arduino and the LNB is serial data at 9600 Baud with levels of 0V and +15V. Because the Arduino can only produce data at 5V it is necessary to build a simple level converter circuit using a few low cost components. There are three pushbuttons for control. The interface needs a power supply between 18 and 30 Volts DC. This can be from two 9V batteries or an external power supply. The LNB also needs to be powered through its normal Green F Type connector. 
 
-The schematic for this interface is included in file https://github.com/g4eml/Bullseye-Calibrator/blob/main/Schematic.pdf  None of the parts are particularly critical and may be surface mount or through hole parts. The bill of materials bom.pdf has suggested parts available from Farnell and Mouser. 
+The schematic for this interface is included in file https://github.com/g4eml/Bullseye-Calibrator/blob/main/Schematic.pdf  None of the parts are particularly critical and may be surface mount or through hole parts. The bill of materials https://github.com/g4eml/Bullseye-Calibrator/blob/main/BOM.pdf has suggested parts available from Farnell.
 
 ### Stand-Alone Operation
 To adjust the calibration of the LNB using the calibrator you need to do the following...
