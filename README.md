@@ -17,6 +17,8 @@ The Bullseye LNB is programmed through its Red F Type connector. As detailed in 
 
 The schematic for this interface is included in file https://github.com/g4eml/Bullseye-Calibrator/blob/main/Schematic.pdf  None of the parts are particularly critical and may be surface mount or through hole parts. The bill of materials https://github.com/g4eml/Bullseye-Calibrator/blob/main/BOM.pdf has suggested parts with Farnell part numbers.
 
+PCB Files in Eagle format Plus Gerbers are included for both SMT devices and Through Hole devices. 
+
 ### Stand-Alone Operation
 To adjust the calibration of the LNB using the calibrator you need to do the following...
 
