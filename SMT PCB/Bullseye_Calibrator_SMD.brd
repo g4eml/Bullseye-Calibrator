@@ -16,16 +16,16 @@
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
-<layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="yes" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="yes" active="yes"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="yes" active="yes"/>
@@ -1732,23 +1732,26 @@ design rules under a new name.</description>
 <wire x1="37.626753125" y1="45.73158125" x2="37.626753125" y2="43.18" width="0.8128" layer="1"/>
 <wire x1="37.626753125" y1="43.18" x2="33.02" y2="43.18" width="0.8128" layer="1"/>
 </signal>
+<signal name="S$66">
+<wire x1="10.18568125" y1="35.56" x2="10.16" y2="35.56" width="1.778" layer="16"/>
+</signal>
 <signal name="S$46">
 <wire x1="43.6577875" y1="45.67815" x2="43.6577875" y2="39.2058875" width="1.4224" layer="1"/>
 <wire x1="43.6577875" y1="39.2058875" x2="10.18568125" y2="39.2058875" width="1.4224" layer="1"/>
 <wire x1="10.18568125" y1="39.2058875" x2="10.18568125" y2="35.56" width="1.4224" layer="1"/>
-<wire x1="10.18568125" y1="35.56" x2="10.16" y2="35.56" width="1.778" layer="16"/>
-<via x="10.18568125" y="35.56" extent="1-16" drill="0.6" shape="square"/>
 </signal>
-<signal name="S$57">
+<signal name="S$64">
 <wire x1="21.175271875" y1="54.165178125" x2="21.175271875" y2="62.4286" width="1.6764" layer="1"/>
+</signal>
+<signal name="S$65">
 <wire x1="21.175271875" y1="62.4286" x2="21.25105625" y2="62.4286" width="1.6764" layer="16"/>
 <wire x1="21.25105625" y1="62.4286" x2="21.25105625" y2="62.314884375" width="1.6764" layer="16"/>
+</signal>
+<signal name="S$57">
 <wire x1="21.25105625" y1="62.314884375" x2="29.246228125" y2="62.314884375" width="1.6764" layer="1"/>
 <wire x1="29.246228125" y1="62.314884375" x2="29.246228125" y2="54.09108125" width="1.6764" layer="1"/>
 <wire x1="29.246228125" y1="54.09108125" x2="43.2274" y2="54.09108125" width="1.4224" layer="1"/>
 <wire x1="43.2274" y1="54.09108125" x2="43.2274" y2="50.442665625" width="1.4224" layer="1"/>
-<via x="21.25105625" y="62.314884375" extent="1-16" drill="0.6" shape="square"/>
-<via x="21.175271875" y="62.4286" extent="1-16" drill="0.6" shape="square"/>
 </signal>
 <signal name="S$43">
 <wire x1="31.64364375" y1="45.525934375" x2="34.771325" y2="45.525934375" width="0.8128" layer="1"/>
