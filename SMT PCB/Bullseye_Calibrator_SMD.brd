@@ -16,16 +16,16 @@
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
-<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="yes" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="yes" active="yes"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="yes" active="yes"/>
@@ -87,6 +87,9 @@ RED</text>
 CALIBRATOR
 G4EML</text>
 <text x="14.365821875" y="26.578703125" size="1.778" layer="21" font="fixed">ARDUINO NANO</text>
+<text x="42.65035" y="60.322175" size="1.778" layer="21" align="center">25
+MHz
+Out</text>
 </plain>
 <libraries>
 <library name="switch-omron">
@@ -1334,6 +1337,35 @@ www.avagotech.com&lt;p&gt;</description>
 </package>
 </packages>
 </library>
+<library name="jumper">
+<description>&lt;b&gt;Jumpers&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="JP1">
+<description>&lt;b&gt;JUMPER&lt;/b&gt;</description>
+<wire x1="-1.016" y1="0" x2="-1.27" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="-1.016" y1="0" x2="-1.27" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="0" x2="1.27" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="0" x2="1.27" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.254" x2="1.27" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="-2.54" x2="1.27" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="2.286" x2="1.016" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="2.286" x2="1.27" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="2.54" x2="-1.016" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="2.286" x2="-1.016" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="2.286" x2="-1.27" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.254" x2="-1.27" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="-1.016" y1="-2.54" x2="-1.27" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="-1.016" y1="-2.54" x2="1.016" y2="-2.54" width="0.1524" layer="21"/>
+<pad name="1" x="0" y="-1.27" drill="0.9144" shape="long"/>
+<pad name="2" x="0" y="1.27" drill="0.9144" shape="long"/>
+<text x="-1.651" y="-2.54" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="2.921" y="-2.54" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<rectangle x1="-0.3048" y1="0.9652" x2="0.3048" y2="1.5748" layer="51"/>
+<rectangle x1="-0.3048" y1="-1.5748" x2="0.3048" y2="-0.9652" layer="51"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1578,6 +1610,10 @@ design rules under a new name.</description>
 <attribute name="NAME" x="13.79026875" y="49.3795625" size="1.27" layer="25"/>
 <attribute name="VALUE" x="12.406625" y="49.139590625" size="1.27" layer="27" rot="R270"/>
 </element>
+<element name="J3" library="jumper" package="JP1" value="" x="46.93469375" y="59.850865625" smashed="yes">
+<attribute name="NAME" x="48.02838125" y="64.295721875" size="1.27" layer="25" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="49.85569375" y="57.310865625" size="1.27" layer="27" ratio="10" rot="R90"/>
+</element>
 </elements>
 <signals>
 <signal name="S$2">
@@ -1747,11 +1783,13 @@ design rules under a new name.</description>
 <wire x1="21.175271875" y1="62.4286" x2="21.25105625" y2="62.4286" width="1.6764" layer="16"/>
 <wire x1="21.25105625" y1="62.4286" x2="21.25105625" y2="62.314884375" width="1.6764" layer="16"/>
 </signal>
-<signal name="S$57">
+<signal name="S$67">
 <wire x1="21.25105625" y1="62.314884375" x2="29.246228125" y2="62.314884375" width="1.6764" layer="1"/>
 <wire x1="29.246228125" y1="62.314884375" x2="29.246228125" y2="54.09108125" width="1.6764" layer="1"/>
-<wire x1="29.246228125" y1="54.09108125" x2="43.2274" y2="54.09108125" width="1.4224" layer="1"/>
-<wire x1="43.2274" y1="54.09108125" x2="43.2274" y2="50.442665625" width="1.4224" layer="1"/>
+</signal>
+<signal name="S$57">
+<wire x1="29.246228125" y1="54.09108125" x2="43.7092375" y2="54.069178125" width="1.4224" layer="16"/>
+<wire x1="43.7092375" y1="54.069178125" x2="43.7358625" y2="45.4348" width="1.4224" layer="16"/>
 </signal>
 <signal name="S$43">
 <wire x1="31.64364375" y1="45.525934375" x2="34.771325" y2="45.525934375" width="0.8128" layer="1"/>
@@ -1822,6 +1860,25 @@ design rules under a new name.</description>
 <signal name="S$63">
 <wire x1="25.4" y1="58.42" x2="25.4" y2="48.6216125" width="0.8128" layer="1"/>
 <wire x1="25.4" y1="48.6216125" x2="25.403265625" y2="48.6216125" width="0.8128" layer="1"/>
+</signal>
+<signal name="S$68">
+<wire x1="40.64594375" y1="50.511465625" x2="43.717578125" y2="50.511465625" width="1.4224" layer="16"/>
+</signal>
+<signal name="S$69">
+<wire x1="46.984446875" y1="58.63309375" x2="46.98445" y2="54.15151875" width="1.4224" layer="16"/>
+<wire x1="46.98445" y1="54.15151875" x2="43.411159375" y2="54.060634375" width="1.4224" layer="16"/>
+</signal>
+<signal name="S$70">
+<wire x1="29.198825" y1="54.139325" x2="29.198825" y2="62.30840625" width="1.6764" layer="16"/>
+<wire x1="29.198825" y1="62.30840625" x2="21.116028125" y2="62.30840625" width="1.6764" layer="16"/>
+<wire x1="21.116028125" y1="62.30840625" x2="21.116028125" y2="54.117425" width="1.6764" layer="16"/>
+<wire x1="21.116028125" y1="54.117425" x2="21.137934375" y2="54.117425" width="1.4224" layer="16"/>
+</signal>
+<signal name="S$71">
+<wire x1="29.894465625" y1="48.64216875" x2="29.894465625" y2="50.54755625" width="0.8128" layer="1"/>
+<wire x1="29.894465625" y1="50.54755625" x2="32.982465625" y2="50.54755625" width="0.8128" layer="1"/>
+<wire x1="32.982465625" y1="50.54755625" x2="32.982465625" y2="61.069878125" width="0.8128" layer="1"/>
+<wire x1="32.982465625" y1="61.069878125" x2="47.107109375" y2="61.06988125" width="0.8128" layer="1"/>
 </signal>
 </signals>
 </board>
