@@ -7,6 +7,8 @@ With the kind support of Othernet and the LNB manufacturer Sy Science and Techno
 
 This design is for a stand-alone Arduino based calibration tool which allows the LNB TCXO Frequency to be adjusted by the end user. It is also possible to connect this tool to a PC and send adjustment commands. 
 
+Also included in the files is a .STL file for 3D printing a replacement Cap for the LNB. This has a 22mm hole to allow a short length of 22mm copper tube to be pushed in until it touches the Waveguide of the LNB. This then allows the LNB to be connected to a dual band POTY feed for QO-100 use. 
+
 ### Warning!
 The Alignment document makes it clear that any attempt to adjust the LNB will invalidate the warranty. If you try to adjust your LNB using this calibrator you are doing so at your own risk.  
 
