@@ -31,6 +31,7 @@ char valid[]="ACDEMPQSUWXZ";    //Valid commands for Bullseye LNB. WARNING! Do n
 char inChar[]="#";
 int debounce;
 int repeatDelay;
+int ledDelay;
 int buttons;
 enum {NONE,PLUS,MINUS,PLUSMINUS,SAVE,PLUSSAVE,MINUSSAVE,ALL};
 unsigned long lastTick;
@@ -50,11 +51,14 @@ void setup()
   pinMode(PLUSBUT,INPUT_PULLUP);
   pinMode(SAVEBUT,INPUT_PULLUP);
   pinMode(MINUSBUT,INPUT_PULLUP);
+  pinMode(LED_BUILTIN,OUTPUT);
 
   debounce=0;
   repeatDelay=0;
+  ledDelay=0;
   lastTick=millis();
   factoryReset=0;
+  
 }
 
 void loop() 
@@ -67,6 +71,9 @@ void loop()
     inChar[0] = Serial.read();       //Get the character from the PC
     if(strpbrk(inChar,valid))        //Test if that Character is a valid command
     {
+      digitalWrite(LED_BUILTIN,1);
+      ledDelay=10;
+      repeatDelay=10;
       LNBSerial.write(inChar[0]);    //Send the character to the LNB
     }
 
@@ -89,6 +96,8 @@ void loop()
       if((debounce==0) | (repeatDelay==0))
         {
            LNBSerial.write("W");
+           digitalWrite(LED_BUILTIN,1);
+           ledDelay=10;
            if(repeatDelay==0) repeatDelay=10;
         }
       if(debounce<20) debounce=20;
@@ -98,18 +107,27 @@ void loop()
       if((debounce==0) | (repeatDelay==0))
         {
            LNBSerial.write("Q");
+           digitalWrite(LED_BUILTIN,1);
+           ledDelay=10;
            if(repeatDelay==0) repeatDelay=10;
         }
       if(debounce<20) debounce=20;
       break;
    
     case SAVE:
-      if(debounce==0) LNBSerial.write("U");
+      if(debounce==0) 
+      {
+        LNBSerial.write("U");
+        digitalWrite(LED_BUILTIN,1);
+        ledDelay=10;
+      }
       if (debounce=20) debounce=20; 
       break;
 
       case ALL:
       factoryReset=1;
+      digitalWrite(LED_BUILTIN,1);
+      ledDelay=10;
       debounce=100;    
       break;  
    }
@@ -121,6 +139,13 @@ void loop()
    {
      LNBSerial.write("P");
      factoryReset=0;
+     for(int c=0;c<6;c++)
+     {
+      digitalWrite(LED_BUILTIN,1);
+      delay(100);
+      digitalWrite(LED_BUILTIN,0);
+      delay(100);
+     }
    }
 
 
@@ -136,6 +161,14 @@ void loop()
       if(debounce>0)
         {
           debounce=debounce-1;
+        }
+      if(ledDelay>0)
+        {
+          ledDelay=ledDelay-1;
+        }
+      else
+        {
+          digitalWrite(LED_BUILTIN,0);
         }
     }
 
