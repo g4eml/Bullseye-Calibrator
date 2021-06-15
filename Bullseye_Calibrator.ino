@@ -121,7 +121,7 @@ void loop()
         digitalWrite(LED_BUILTIN,1);
         ledDelay=10;
       }
-      if (debounce=20) debounce=20; 
+      if (debounce<20) debounce=20; 
       break;
 
       case ALL:
