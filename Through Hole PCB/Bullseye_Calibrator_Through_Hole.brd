@@ -1380,6 +1380,27 @@ Created by Robert Siegler</description>
 </package>
 </packages>
 </library>
+<library name="ref-packages">
+<description>&lt;b&gt;Reference Package&lt;/b&gt;&lt;p&gt;</description>
+<packages>
+<package name="D-5">
+<description>&lt;b&gt;DIODE&lt;/b&gt;</description>
+<wire x1="1.397" y1="0.889" x2="-1.397" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="-1.397" y1="-0.889" x2="1.397" y2="-0.889" width="0.1524" layer="21"/>
+<wire x1="-1.397" y1="0" x2="-1.524" y2="0" width="0.1524" layer="21"/>
+<wire x1="-1.397" y1="0.889" x2="-1.397" y2="0" width="0.1524" layer="21"/>
+<wire x1="1.524" y1="0" x2="1.397" y2="0" width="0.1524" layer="21"/>
+<wire x1="1.397" y1="-0.889" x2="1.397" y2="0" width="0.1524" layer="21"/>
+<wire x1="-1.397" y1="0" x2="-1.397" y2="-0.889" width="0.1524" layer="21"/>
+<wire x1="1.397" y1="0" x2="1.397" y2="0.889" width="0.1524" layer="21"/>
+<pad name="A" x="2.54" y="0" drill="0.8128" shape="octagon"/>
+<pad name="C" x="-2.54" y="0" drill="0.8128" shape="octagon"/>
+<text x="-1.905" y="1.27" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-1.905" y="-2.54" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="-1.016" y1="-0.889" x2="-0.508" y2="0.889" layer="21"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1572,8 +1593,8 @@ design rules under a new name.</description>
 <element name="S1" library="switch-omron" package="B3F-10XX" value="" x="7.919146875" y="9.461903125" rot="R90"/>
 <element name="S2" library="switch-omron" package="B3F-10XX" value="" x="25.397153125" y="9.433584375" rot="R90"/>
 <element name="S3" library="switch-omron" package="B3F-10XX" value="" x="42.885275" y="9.423371875" rot="R90"/>
-<element name="IC1" library="linear" package="TO92" value="78L15" x="25.4" y="45.72" smashed="yes">
-<attribute name="NAME" x="24.023821875" y="41.874684375" size="1.27" layer="25" ratio="10"/>
+<element name="IC1" library="linear" package="TO92" value="78L15" x="21.65895" y="46.10444375" smashed="yes">
+<attribute name="NAME" x="20.282771875" y="42.259128125" size="1.27" layer="25" ratio="10"/>
 </element>
 <element name="TR2" library="linear" package="TO92" value="NPN" x="12.037575" y="53.375684375" smashed="yes" rot="R90">
 <attribute name="NAME" x="13.43284375" y="50.044959375" size="1.27" layer="25" ratio="10" rot="R180"/>
@@ -1584,11 +1605,11 @@ design rules under a new name.</description>
 <element name="C3" library="rcl" package="C025_050-024X070" value="470p" x="31.159821875" y="66.130353125" smashed="yes">
 <attribute name="NAME" x="30.059446875" y="67.86946875" size="1.27" layer="25" ratio="10"/>
 </element>
-<element name="C2" library="rcl" package="C025_050-024X070" value="100n" x="17.810021875" y="44.45126875" smashed="yes" rot="R270">
-<attribute name="NAME" x="16.933375" y="40.20400625" size="1.27" layer="25" ratio="10"/>
+<element name="C2" library="rcl" package="C025_050-024X070" value="100n" x="15.270021875" y="44.45126875" smashed="yes" rot="R270">
+<attribute name="NAME" x="14.393375" y="40.20400625" size="1.27" layer="25" ratio="10"/>
 </element>
-<element name="C1" library="rcl" package="C025_050-024X070" value="100n" x="32.910259375" y="44.41428125" smashed="yes" rot="R270">
-<attribute name="NAME" x="31.9817875" y="40.3086" size="1.27" layer="25" ratio="10"/>
+<element name="C1" library="rcl" package="C025_050-024X070" value="100n" x="27.830259375" y="44.41428125" smashed="yes" rot="R270">
+<attribute name="NAME" x="26.9017875" y="40.3086" size="1.27" layer="25" ratio="10"/>
 </element>
 <element name="J1" library="con-jack" package="SPC4077" value="" x="40.64" y="45.72" smashed="yes" rot="R180">
 <attribute name="NAME" x="43.18" y="40.64" size="1.27" layer="25" rot="R180"/>
@@ -1615,6 +1636,10 @@ design rules under a new name.</description>
 <element name="J3" library="jumper" package="JP1" value="" x="45.25555625" y="76.40835625" smashed="yes">
 <attribute name="NAME" x="46.353590625" y="81.00411875" size="1.27" layer="25" ratio="10" rot="R180"/>
 <attribute name="VALUE" x="48.17655625" y="73.86835625" size="1.27" layer="27" ratio="10" rot="R90"/>
+</element>
+<element name="D1" library="ref-packages" package="D-5" value="" x="32.860103125" y="43.136025" smashed="yes">
+<attribute name="NAME" x="32.009803125" y="44.759534375" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="31.209103125" y="40.723025" size="1.27" layer="27" ratio="10"/>
 </element>
 </elements>
 <signals>
@@ -1758,27 +1783,23 @@ design rules under a new name.</description>
 <wire x1="45.085" y1="16.51" x2="45.085" y2="5.08" width="1.6764" layer="16"/>
 </signal>
 <signal name="S$42">
-<wire x1="24.12981875" y1="45.7255125" x2="21.582778125" y2="43.108215625" width="1.6764" layer="16"/>
-<wire x1="21.582778125" y1="43.108215625" x2="7.632515625" y2="43.093853125" width="1.6764" layer="16"/>
+<wire x1="20.38876875" y1="46.013846875" x2="18.03389375" y2="43.25238125" width="1.6764" layer="16"/>
+<wire x1="18.03389375" y1="43.25238125" x2="7.632515625" y2="43.093853125" width="1.6764" layer="16"/>
 <wire x1="7.632515625" y1="43.093853125" x2="7.632515625" y2="35.56" width="1.6764" layer="16"/>
 <wire x1="7.632515625" y1="35.56" x2="7.62" y2="35.56" width="1.778" layer="16"/>
 </signal>
-<signal name="S$43">
-<wire x1="26.66824375" y1="45.696421875" x2="29.288646875" y2="43.0703375" width="1.6764" layer="16"/>
-<wire x1="29.288646875" y1="43.0703375" x2="33.336184375" y2="43.10191875" width="1.6764" layer="16"/>
+<signal name="D1">
+<wire x1="22.92719375" y1="46.080865625" x2="25.4515125" y2="43.262559375" width="1.6764" layer="16"/>
+<wire x1="25.4515125" y1="43.262559375" x2="30.25859375" y2="43.17331875" width="1.6764" layer="16"/>
 </signal>
 <signal name="S$44">
-<wire x1="33.02" y1="45.72" x2="33.02" y2="48.26" width="1.6764" layer="16"/>
-<wire x1="33.02" y1="48.26" x2="17.78" y2="48.26" width="1.6764" layer="16"/>
-<wire x1="17.78" y1="48.26" x2="17.78" y2="45.72" width="1.6764" layer="16"/>
-<wire x1="33.02" y1="48.26" x2="33.02" y2="50.54051875" width="1.6764" layer="16"/>
+<wire x1="27.94" y1="45.72" x2="27.94" y2="48.26" width="1.6764" layer="16"/>
+<wire x1="27.94" y1="48.26" x2="15.24" y2="48.26" width="1.6764" layer="16"/>
+<wire x1="15.24" y1="48.26" x2="15.24" y2="45.72" width="1.6764" layer="16"/>
+<wire x1="27.94" y1="48.26" x2="33.02" y2="50.54051875" width="1.6764" layer="16"/>
 <wire x1="33.02" y1="50.54051875" x2="43.661440625" y2="50.54051875" width="1.6764" layer="16"/>
 <wire x1="43.661440625" y1="50.54051875" x2="43.661440625" y2="44.5760875" width="1.6764" layer="16"/>
 <wire x1="43.661440625" y1="44.5760875" x2="43.705284375" y2="44.5760875" width="1.778" layer="16"/>
-</signal>
-<signal name="S$45">
-<wire x1="37.626753125" y1="45.73158125" x2="37.626753125" y2="43.18" width="1.778" layer="16"/>
-<wire x1="37.626753125" y1="43.18" x2="33.02" y2="43.18" width="1.778" layer="16"/>
 </signal>
 <signal name="S$46">
 <wire x1="43.6577875" y1="45.67815" x2="43.6577875" y2="39.2058875" width="1.6764" layer="16"/>
@@ -1854,6 +1875,10 @@ design rules under a new name.</description>
 <signal name="S$62">
 <wire x1="45.27958125" y1="75.0398875" x2="35.631146875" y2="75.0398875" width="1.6764" layer="16"/>
 <wire x1="35.631146875" y1="75.0398875" x2="35.631146875" y2="66.0703375" width="1.6764" layer="16"/>
+</signal>
+<signal name="S$43">
+<wire x1="35.419790625" y1="43.10005" x2="37.759490625" y2="43.10005" width="1.6764" layer="16"/>
+<wire x1="37.759490625" y1="43.10005" x2="37.759490625" y2="45.46233125" width="1.6764" layer="16"/>
 </signal>
 </signals>
 </board>
